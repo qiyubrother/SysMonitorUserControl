@@ -41,7 +41,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ForeColor = System.Drawing.Color.LimeGreen;
             this.Name = "UCMemory";
             this.Size = new System.Drawing.Size(54, 25);
             this.ResumeLayout(false);

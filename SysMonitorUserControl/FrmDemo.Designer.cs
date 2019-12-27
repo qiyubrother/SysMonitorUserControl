@@ -33,7 +33,7 @@
             this.ucMemory1 = new SysMonitorUserControl.UCMemory();
             this.uccpu1 = new SysMonitorUserControl.UCCPU();
             this.ucSpeaker1 = new WindowsFormsApp3.UCSpeaker();
-            this.ucMicrophone2 = new SysMonitorUserControl.UCMicrophone();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ucMicrophone1
@@ -81,25 +81,21 @@
             this.ucSpeaker1.TabIndex = 3;
             this.ucSpeaker1.UsageColor = System.Drawing.Color.Crimson;
             // 
-            // ucMicrophone2
+            // label1
             // 
-            this.ucMicrophone2.BackColor = System.Drawing.Color.Black;
-            this.ucMicrophone2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucMicrophone2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucMicrophone2.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.ucMicrophone2.Location = new System.Drawing.Point(25, 128);
-            this.ucMicrophone2.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.ucMicrophone2.Name = "ucMicrophone2";
-            this.ucMicrophone2.Size = new System.Drawing.Size(40, 25);
-            this.ucMicrophone2.TabIndex = 4;
-            this.ucMicrophone2.UsageColor = System.Drawing.Color.DarkRed;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(25, 143);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(533, 12);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "如果麦克风监控没有数值变化，请开启：【麦克风属性】的【侦听】选项中的【侦听此设备】功能。";
             // 
             // FrmDemo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.ucMicrophone2);
+            this.ClientSize = new System.Drawing.Size(605, 179);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.ucSpeaker1);
             this.Controls.Add(this.ucMicrophone1);
             this.Controls.Add(this.ucMemory1);
@@ -108,6 +104,7 @@
             this.Text = "User Control Demo";
             this.Load += new System.EventHandler(this.FrmDemo_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -117,7 +114,7 @@
         private UCMemory ucMemory1;
         private UCMicrophone ucMicrophone1;
         private WindowsFormsApp3.UCSpeaker ucSpeaker1;
-        private UCMicrophone ucMicrophone2;
+        private System.Windows.Forms.Label label1;
     }
 }
 
