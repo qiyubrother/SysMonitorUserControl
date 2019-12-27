@@ -34,6 +34,7 @@
             this.uccpu1 = new SysMonitorUserControl.UCCPU();
             this.ucSpeaker1 = new WindowsFormsApp3.UCSpeaker();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnOpenSoundManagement = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ucMicrophone1
@@ -86,15 +87,26 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(25, 143);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(533, 12);
+            this.label1.Size = new System.Drawing.Size(671, 12);
             this.label1.TabIndex = 4;
-            this.label1.Text = "如果麦克风监控没有数值变化，请开启：【麦克风属性】的【侦听】选项中的【侦听此设备】功能。";
+            this.label1.Text = "如果麦克风监控没有数值变化，请开启：【麦克风属性】的【侦听】选项中的【侦听此设备】功能。控制面板命令：mmsys.cpl";
+            // 
+            // btnOpenSoundManagement
+            // 
+            this.btnOpenSoundManagement.Location = new System.Drawing.Point(27, 159);
+            this.btnOpenSoundManagement.Name = "btnOpenSoundManagement";
+            this.btnOpenSoundManagement.Size = new System.Drawing.Size(119, 23);
+            this.btnOpenSoundManagement.TabIndex = 5;
+            this.btnOpenSoundManagement.Text = "打开声音管理";
+            this.btnOpenSoundManagement.UseVisualStyleBackColor = true;
+            this.btnOpenSoundManagement.Click += new System.EventHandler(this.btnOpenSoundManagement_Click);
             // 
             // FrmDemo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(605, 179);
+            this.ClientSize = new System.Drawing.Size(983, 199);
+            this.Controls.Add(this.btnOpenSoundManagement);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ucSpeaker1);
             this.Controls.Add(this.ucMicrophone1);
@@ -115,6 +127,7 @@
         private UCMicrophone ucMicrophone1;
         private WindowsFormsApp3.UCSpeaker ucSpeaker1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnOpenSoundManagement;
     }
 }
 
