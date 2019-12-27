@@ -29,13 +29,44 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDemo));
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnOpenSoundManagement = new System.Windows.Forms.Button();
+            this.ucSpeaker1 = new WindowsFormsApp3.UCSpeaker();
             this.ucMicrophone1 = new SysMonitorUserControl.UCMicrophone();
             this.ucMemory1 = new SysMonitorUserControl.UCMemory();
             this.uccpu1 = new SysMonitorUserControl.UCCPU();
-            this.ucSpeaker1 = new WindowsFormsApp3.UCSpeaker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnOpenSoundManagement = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(25, 143);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(671, 12);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "如果麦克风监控没有数值变化，请开启：【麦克风属性】的【侦听】选项中的【侦听此设备】功能。控制面板命令：mmsys.cpl";
+            // 
+            // btnOpenSoundManagement
+            // 
+            this.btnOpenSoundManagement.Location = new System.Drawing.Point(27, 159);
+            this.btnOpenSoundManagement.Name = "btnOpenSoundManagement";
+            this.btnOpenSoundManagement.Size = new System.Drawing.Size(119, 23);
+            this.btnOpenSoundManagement.TabIndex = 5;
+            this.btnOpenSoundManagement.Text = "打开声音管理";
+            this.btnOpenSoundManagement.UseVisualStyleBackColor = true;
+            this.btnOpenSoundManagement.Click += new System.EventHandler(this.btnOpenSoundManagement_Click);
+            // 
+            // ucSpeaker1
+            // 
+            this.ucSpeaker1.BackColor = System.Drawing.Color.Black;
+            this.ucSpeaker1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ucSpeaker1.ForeColor = System.Drawing.Color.LimeGreen;
+            this.ucSpeaker1.Location = new System.Drawing.Point(163, 24);
+            this.ucSpeaker1.Name = "ucSpeaker1";
+            this.ucSpeaker1.Size = new System.Drawing.Size(40, 68);
+            this.ucSpeaker1.TabIndex = 3;
+            this.ucSpeaker1.UsageColor = System.Drawing.Color.Crimson;
             // 
             // ucMicrophone1
             // 
@@ -52,8 +83,10 @@
             // 
             // ucMemory1
             // 
+            this.ucMemory1.BackColor = System.Drawing.Color.Black;
             this.ucMemory1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ucMemory1.BackgroundImage")));
             this.ucMemory1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ucMemory1.ForeColor = System.Drawing.Color.LimeGreen;
             this.ucMemory1.Location = new System.Drawing.Point(57, 24);
             this.ucMemory1.Name = "ucMemory1";
             this.ucMemory1.Size = new System.Drawing.Size(54, 25);
@@ -70,36 +103,6 @@
             this.uccpu1.Size = new System.Drawing.Size(25, 25);
             this.uccpu1.TabIndex = 0;
             this.uccpu1.UsageColor = System.Drawing.Color.DarkRed;
-            // 
-            // ucSpeaker1
-            // 
-            this.ucSpeaker1.BackColor = System.Drawing.Color.Black;
-            this.ucSpeaker1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucSpeaker1.ForeColor = System.Drawing.Color.LimeGreen;
-            this.ucSpeaker1.Location = new System.Drawing.Point(163, 24);
-            this.ucSpeaker1.Name = "ucSpeaker1";
-            this.ucSpeaker1.Size = new System.Drawing.Size(40, 68);
-            this.ucSpeaker1.TabIndex = 3;
-            this.ucSpeaker1.UsageColor = System.Drawing.Color.Crimson;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 143);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(671, 12);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "如果麦克风监控没有数值变化，请开启：【麦克风属性】的【侦听】选项中的【侦听此设备】功能。控制面板命令：mmsys.cpl";
-            // 
-            // btnOpenSoundManagement
-            // 
-            this.btnOpenSoundManagement.Location = new System.Drawing.Point(27, 159);
-            this.btnOpenSoundManagement.Name = "btnOpenSoundManagement";
-            this.btnOpenSoundManagement.Size = new System.Drawing.Size(119, 23);
-            this.btnOpenSoundManagement.TabIndex = 5;
-            this.btnOpenSoundManagement.Text = "打开声音管理";
-            this.btnOpenSoundManagement.UseVisualStyleBackColor = true;
-            this.btnOpenSoundManagement.Click += new System.EventHandler(this.btnOpenSoundManagement_Click);
             // 
             // FrmDemo
             // 

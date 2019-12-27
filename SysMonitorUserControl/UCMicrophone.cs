@@ -44,18 +44,27 @@ namespace SysMonitorUserControl
         public Color UsageColor { get; set; }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            try
+            //try
+            //{
+            //    using (var defaultDevice = enumerator.GetDefaultAudioEndpoint(DataFlow.Capture, Role.Console))
+            //    {
+            //        if (defaultDevice != null)
+            //        {
+            //            microphoneValue = defaultDevice.AudioMeterInformation.MasterPeakValue * 100;
+            //            CreateImage();
+            //        }
+            //    }
+            //}
+            //catch { }
+
+            var CaptureDevices = enumerator.EnumerateAudioEndPoints(DataFlow.Capture, DeviceState.Active).ToArray();
+            using (var defaultDevice = enumerator.GetDefaultAudioEndpoint(DataFlow.Capture, Role.Console))
             {
-                using (var defaultDevice = enumerator.GetDefaultAudioEndpoint(DataFlow.Capture, Role.Console))
-                {
-                    if (defaultDevice != null)
-                    {
-                        microphoneValue = defaultDevice.AudioMeterInformation.MasterPeakValue * 100;
-                        CreateImage();
-                    }
-                }
+                var selectedDevice = CaptureDevices.FirstOrDefault(c => c.ID == defaultDevice.ID);
+                microphoneValue = selectedDevice.AudioMeterInformation.MasterPeakValue * 100;
+                CreateImage();
+                Application.DoEvents();
             }
-            catch { }
 
         }
 

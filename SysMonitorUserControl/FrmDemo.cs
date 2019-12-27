@@ -20,8 +20,8 @@ namespace SysMonitorUserControl
 
         private void FrmDemo_Load(object sender, EventArgs e)
         {
-            uccpu1.Start();
-            ucMemory1.Start();
+            //uccpu1.Start();
+            //ucMemory1.Start();
             ucMicrophone1.Start();
             ucSpeaker1.Start();
         }
