@@ -40,16 +40,20 @@ namespace WindowsFormsApp3
         public Color UsageColor { get; set; }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            using (var defaultDevice = enumerator.GetDefaultAudioEndpoint(DataFlow.Render, Role.Multimedia))
+            try
             {
-                if (defaultDevice != null)
+                using (var defaultDevice = enumerator.GetDefaultAudioEndpoint(DataFlow.Render, Role.Multimedia))
                 {
-                    speakerValue = (int)(defaultDevice.AudioMeterInformation.MasterPeakValue * 100);
-                    defaultDevice.Dispose();
-                    CreateImage();
-                    Application.DoEvents();
+                    if (defaultDevice != null)
+                    {
+                        speakerValue = (int)(defaultDevice.AudioMeterInformation.MasterPeakValue * 100);
+                        defaultDevice.Dispose();
+                        CreateImage();
+                        Application.DoEvents();
+                    }
                 }
             }
+            catch { }
         }
 
         public void Start() => timer1.Start();

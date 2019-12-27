@@ -23,6 +23,7 @@ namespace SysMonitorUserControl
             ucMemory1.Start();
             ucMicrophone1.Start();
             ucSpeaker1.Start();
+            ucMicrophone2.Start();
         }
     }
 }
