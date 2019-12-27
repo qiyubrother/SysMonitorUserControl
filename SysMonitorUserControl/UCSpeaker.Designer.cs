@@ -34,7 +34,7 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // UCSpeaker
             // 
@@ -42,6 +42,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ForeColor = System.Drawing.Color.LimeGreen;
             this.Name = "UCSpeaker";
             this.Size = new System.Drawing.Size(40, 25);
             this.ResumeLayout(false);

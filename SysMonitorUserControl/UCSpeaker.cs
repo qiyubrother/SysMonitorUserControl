@@ -13,11 +13,13 @@ namespace WindowsFormsApp3
 {
     public partial class UCSpeaker : UserControl
     {
+        MMDeviceEnumerator enumerator = null;
         public UCSpeaker()
         {
             InitializeComponent();
 
             UsageColor = Color.DarkRed;
+            enumerator = new MMDeviceEnumerator();
         }
 
         float speakerValue = 0;
@@ -29,11 +31,7 @@ namespace WindowsFormsApp3
             SolidBrush usageBrush = new SolidBrush(UsageColor);
             g.FillRectangle(usageBrush, 0, Height * (1 - speakerValue * 1.0f / 100), Width, Height * (speakerValue * 1.0f / 100));
             SizeF _sz = new Size(0, 0);
-            string _s = speakerValue.ToString("0.00");
-            if (_s == "100.00")
-            {
-                _s = "100";
-            }
+            string _s = speakerValue.ToString();
             _sz = g.MeasureString(_s, Font);
             g.DrawString(_s, Font, new SolidBrush(ForeColor), (Width - _sz.Width) / 2, (Height - _sz.Height) / 2);
             BackgroundImage = image;
@@ -42,15 +40,17 @@ namespace WindowsFormsApp3
         public Color UsageColor { get; set; }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            //var enumerator = new MMDeviceEnumerator();
-            //var CaptureDevices = enumerator.EnumerateAudioEndPoints(DataFlow.Render, DeviceState.Active).ToArray();
-            //var defaultDevice = enumerator.GetDefaultAudioEndpoint(DataFlow.Render, Role.Console);
-            //var selectedDevice = CaptureDevices.FirstOrDefault(c => c.ID == defaultDevice.ID);
-            //speakerValue = selectedDevice.AudioMeterInformation.MasterPeakValue * 100;
-            //CreateImage();
-            //Application.DoEvents();
+            using (var defaultDevice = enumerator.GetDefaultAudioEndpoint(DataFlow.Render, Role.Multimedia))
+            {
+                if (defaultDevice != null)
+                {
+                    speakerValue = (int)(defaultDevice.AudioMeterInformation.MasterPeakValue * 100);
+                    defaultDevice.Dispose();
+                    CreateImage();
+                    Application.DoEvents();
+                }
+            }
         }
-
 
         public void Start() => timer1.Start();
 

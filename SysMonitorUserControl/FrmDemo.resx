@@ -120,9 +120,9 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ucMemory1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAADYAAAAZCAYAAAB6v90+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA2SURBVFhH7c9BEQAgAAQh+6e9BpoDZx8E4Gy7PyqmKaYp
-        pimmKaYppimmKaYppimmKaYpZtl9+Y0Wx/96FQ4AAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAADYAAAAZCAYAAAB6v90+AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAADZJREFUWEftz0ERACAABCH7p70GmgNnHwTgbLs/KqYppimmKaYppimmKaYppimm
+        KaYppilm2X35jRbH/3oVDgAAAABJRU5ErkJggg==
 </value>
   </data>
 </root>

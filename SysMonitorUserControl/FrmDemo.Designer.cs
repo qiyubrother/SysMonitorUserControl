@@ -29,32 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDemo));
-            this.uccpu1 = new SysMonitorUserControl.UCCPU();
-            this.ucMemory1 = new SysMonitorUserControl.UCMemory();
             this.ucMicrophone1 = new SysMonitorUserControl.UCMicrophone();
+            this.ucMemory1 = new SysMonitorUserControl.UCMemory();
+            this.uccpu1 = new SysMonitorUserControl.UCCPU();
             this.ucSpeaker1 = new WindowsFormsApp3.UCSpeaker();
             this.SuspendLayout();
-            // 
-            // uccpu1
-            // 
-            this.uccpu1.BackColor = System.Drawing.Color.Black;
-            this.uccpu1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.uccpu1.ForeColor = System.Drawing.Color.LawnGreen;
-            this.uccpu1.Location = new System.Drawing.Point(25, 24);
-            this.uccpu1.Name = "uccpu1";
-            this.uccpu1.Size = new System.Drawing.Size(25, 25);
-            this.uccpu1.TabIndex = 0;
-            this.uccpu1.UsageColor = System.Drawing.Color.DarkRed;
-            // 
-            // ucMemory1
-            // 
-            this.ucMemory1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ucMemory1.BackgroundImage")));
-            this.ucMemory1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucMemory1.Location = new System.Drawing.Point(57, 24);
-            this.ucMemory1.Name = "ucMemory1";
-            this.ucMemory1.Size = new System.Drawing.Size(54, 25);
-            this.ucMemory1.TabIndex = 1;
-            this.ucMemory1.UsageColor = System.Drawing.Color.DarkRed;
             // 
             // ucMicrophone1
             // 
@@ -69,11 +48,33 @@
             this.ucMicrophone1.TabIndex = 2;
             this.ucMicrophone1.UsageColor = System.Drawing.Color.DarkRed;
             // 
+            // ucMemory1
+            // 
+            this.ucMemory1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ucMemory1.BackgroundImage")));
+            this.ucMemory1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ucMemory1.Location = new System.Drawing.Point(57, 24);
+            this.ucMemory1.Name = "ucMemory1";
+            this.ucMemory1.Size = new System.Drawing.Size(54, 25);
+            this.ucMemory1.TabIndex = 1;
+            this.ucMemory1.UsageColor = System.Drawing.Color.DarkRed;
+            // 
+            // uccpu1
+            // 
+            this.uccpu1.BackColor = System.Drawing.Color.Black;
+            this.uccpu1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.uccpu1.ForeColor = System.Drawing.Color.LawnGreen;
+            this.uccpu1.Location = new System.Drawing.Point(25, 24);
+            this.uccpu1.Name = "uccpu1";
+            this.uccpu1.Size = new System.Drawing.Size(25, 25);
+            this.uccpu1.TabIndex = 0;
+            this.uccpu1.UsageColor = System.Drawing.Color.DarkRed;
+            // 
             // ucSpeaker1
             // 
             this.ucSpeaker1.BackColor = System.Drawing.Color.Black;
             this.ucSpeaker1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucSpeaker1.Location = new System.Drawing.Point(164, 24);
+            this.ucSpeaker1.ForeColor = System.Drawing.Color.LimeGreen;
+            this.ucSpeaker1.Location = new System.Drawing.Point(175, 24);
             this.ucSpeaker1.Name = "ucSpeaker1";
             this.ucSpeaker1.Size = new System.Drawing.Size(40, 25);
             this.ucSpeaker1.TabIndex = 3;
